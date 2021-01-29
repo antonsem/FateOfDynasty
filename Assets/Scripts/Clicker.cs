@@ -47,7 +47,7 @@ namespace GGJ21
                     clickable.Clicked();
                     break;
                 case ClickButton.Right:
-                    Debug.Log(clickable.Description);
+                    Events.Instance.displayMessage?.Invoke(clickable.Description);
                     break;
             }
         }

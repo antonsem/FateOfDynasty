@@ -6,5 +6,7 @@ namespace GGJ21
     public class Events : Singleton<Events>
     {
         public Action<ItemData> pickedUp;
+        public Action<ItemData> removeItem;
+        public Action<string> displayMessage;
     }
 }

@@ -1,27 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GGJ21
 {
-    public enum ItemID
-    {
-        Book,
-        Key,
-        Glass,
-        Door
-    }
-
-    [Serializable]
-    public class ItemData
-    {
-        public string cantUse;
-        public bool addToInventory;
-        public string used;
-        public string description;
-        public ItemID itemId;
-        public ItemID[] requiredItems;
-    }
-
     public class Item : MonoBehaviour, IClickable
     {
         [SerializeField] private ItemData data;
@@ -37,8 +17,7 @@ namespace GGJ21
                 int count = data.requiredItems.Length;
                 foreach (ItemID requiredItem in data.requiredItems)
                 {
-                    ItemData item = Inventory.Items.Find(i => i.itemId == requiredItem);
-                    if (item != null)
+                    if (Inventory.Items.Find(i => i.itemId == requiredItem)) 
                         count--;
                 }
 
@@ -56,13 +35,19 @@ namespace GGJ21
             if (data.addToInventory)
                 Inventory.AddItem(data);
 
-            Debug.Log(data.used);
-            gameObject.SetActive(false);
+            Events.Instance.displayMessage?.Invoke(data.used);
+            if(data.oneTimeUse)
+                gameObject.SetActive(false);
+
+            if (!data.discardRequiredItems || data.requiredItems == null) return;
+            
+            foreach (ItemID id in data.requiredItems)
+                Inventory.RemoveItem(id);
         }
 
         protected virtual void CantUse()
         {
-            Debug.Log(data.cantUse);
+            Events.Instance.displayMessage?.Invoke(data.cantUse);
         }
     }
 }
