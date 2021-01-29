@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
+using NUnit.Framework;
 
 namespace GGJ21
 {
@@ -11,6 +11,17 @@ namespace GGJ21
         {
             Items.Add(item);
             Events.Instance.pickedUp?.Invoke(item);
+        }
+
+        private static void RemoveItem(in ItemData item)
+        {
+            Items.Remove(item);
+            Events.Instance.removeItem?.Invoke(item);
+        }
+
+        public static void RemoveItem(ItemID itemID)
+        {
+            RemoveItem(Items.Find(i => i.itemId == itemID));
         }
     }
 }
