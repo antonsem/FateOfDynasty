@@ -1,15 +1,25 @@
-﻿using UnityEngine;
+﻿using ExtraTools;
+using UnityEngine;
 
 namespace GGJ21
 {
     public class Item : MonoBehaviour, IClickable
     {
-        [SerializeField] private ItemData data;
+        [SerializeField] protected ItemData data;
 
+        private bool _used = false;
         public string Description => data.description;
 
-        public void Clicked()
+        public virtual void Clicked()
         {
+            if (_used && data.oneTimeUse)
+            {
+                if(data.used.IsValid())
+                    Events.Instance.displayMessage?.Invoke(data.used);
+                
+                return;
+            }
+            
             bool canUse = true;
             if (data.requiredItems != null)
             {
@@ -17,7 +27,7 @@ namespace GGJ21
                 int count = data.requiredItems.Length;
                 foreach (ItemID requiredItem in data.requiredItems)
                 {
-                    if (Inventory.Items.Find(i => i.itemId == requiredItem)) 
+                    if (Inventory.Items.ContainsKey(requiredItem)) 
                         count--;
                 }
 
@@ -32,17 +42,21 @@ namespace GGJ21
 
         protected virtual void Use()
         {
+            _used = true;
             if (data.addToInventory)
                 Inventory.AddItem(data);
 
-            Events.Instance.displayMessage?.Invoke(data.used);
-            if(data.oneTimeUse)
+            Events.Instance.displayMessage?.Invoke(data.use);
+            if(data.disableAfterUse)
                 gameObject.SetActive(false);
 
             if (!data.discardRequiredItems || data.requiredItems == null) return;
             
             foreach (ItemID id in data.requiredItems)
                 Inventory.RemoveItem(id);
+            
+            if(data.addItemOnUse)
+                Inventory.AddItem(data.addItemOnUse);
         }
 
         protected virtual void CantUse()

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Door
+  m_Name: FireSource
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  cantUse: 
+  icon: {fileID: 21300000, guid: 062eeb9d5e8ba8f45a9ddfea52518f82, type: 3}
+  cantUse: A fire source
   addToInventory: 0
-  use: 
-  used: 
-  description: A door
-  itemId: 0
-  requiredItems: 
-  discardRequiredItems: 0
+  use: The knife is clean!
+  used: The knife is clean!
+  description: A nice fire source
+  itemId: 2
+  requiredItems: 04000000
+  discardRequiredItems: 1
   oneTimeUse: 0
   disableAfterUse: 0
-  addItemOnUse: {fileID: 0}
+  addItemOnUse: {fileID: 11400000, guid: c73bec01f4c250c4791f6badaa050276, type: 2}

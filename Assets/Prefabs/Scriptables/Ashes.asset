@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Door
+  m_Name: Ashes
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  cantUse: 
+  icon: {fileID: 21300000, guid: e32b8056f5f2eb741bec42f791c7f1b5, type: 3}
+  cantUse: A nice fireplace
   addToInventory: 0
-  use: 
+  use: Ahh, that is nice. The room is getting warmer...
   used: 
-  description: A door
-  itemId: 0
-  requiredItems: 
-  discardRequiredItems: 0
-  oneTimeUse: 0
+  description: A nice fireplace
+  itemId: 1
+  requiredItems: 03000000
+  discardRequiredItems: 1
+  oneTimeUse: 1
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}

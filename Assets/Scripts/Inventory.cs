@@ -1,27 +1,21 @@
 ﻿using System.Collections.Generic;
-using NUnit.Framework;
 
 namespace GGJ21
 {
     public static class Inventory
     {
-        public static List<ItemData> Items { get; } = new List<ItemData>();
+        public static Dictionary<ItemID, ItemData> Items { get; } = new Dictionary<ItemID, ItemData>();
 
         public static void AddItem(in ItemData item)
         {
-            Items.Add(item);
+            Items.Add(item.itemId, item);
             Events.Instance.pickedUp?.Invoke(item);
-        }
-
-        private static void RemoveItem(in ItemData item)
-        {
-            Items.Remove(item);
-            Events.Instance.removeItem?.Invoke(item);
         }
 
         public static void RemoveItem(ItemID itemID)
         {
-            RemoveItem(Items.Find(i => i.itemId == itemID));
+            Events.Instance.removeItem?.Invoke(Items[itemID]);
+            Items.Remove(itemID);
         }
     }
 }

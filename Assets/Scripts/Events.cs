@@ -8,5 +8,6 @@ namespace GGJ21
         public Action<ItemData> pickedUp;
         public Action<ItemData> removeItem;
         public Action<string> displayMessage;
+        public Action<bool> pause;
     }
 }

@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GGJ21
 {
     public enum ItemID
     {
-        Book,
-        Key,
-        Glass,
+        None,
+        Ashes,
+        FireSource,
+        Matches,
+        Dagger,
+        CleanDagger,
+        Leech,
+        CoagulatedBlood,
+        Blood,
         Door
     }
     
@@ -16,11 +23,14 @@ namespace GGJ21
         public Sprite icon;
         public string cantUse;
         public bool addToInventory;
-        public string used;
-        public string description;
+        [FormerlySerializedAs("used")] [TextArea(2, 10)] public string use;
+        [TextArea(2, 10)] public string used;
+        [TextArea(2, 10)] public string description;
         public ItemID itemId;
         public ItemID[] requiredItems;
         public bool discardRequiredItems;
         public bool oneTimeUse;
+        public bool disableAfterUse;
+        public ItemData addItemOnUse;
     }
 }

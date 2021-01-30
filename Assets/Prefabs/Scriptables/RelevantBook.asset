@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Door
+  m_Name: RelevantBook
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: 
-  used: 
-  description: A door
+  used: It says that leeches can keep the blood non-coagulated!
+  description: A hemotology book!
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
   oneTimeUse: 0
-  disableAfterUse: 0
   addItemOnUse: {fileID: 0}
