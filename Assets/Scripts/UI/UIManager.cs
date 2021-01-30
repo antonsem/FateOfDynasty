@@ -1,21 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GGJ21
 {
     public class UIManager : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private GameObject inGame;
+        [SerializeField] private GameObject pause;
+
+        #region Unity Methods
+
+        private void OnEnable()
         {
-        
+            Events.Instance.pause += OnPause;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnDisable()
         {
+            if(GameState.IsQuitting) return;
+            Events.Instance.pause -= OnPause;
+        }
+
+        #endregion
         
+        private void OnPause(bool state)
+        {
+            inGame.SetActive(!state);
+            pause.SetActive(state);
         }
     }
 }
