@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Leech
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: eefd57e8b57cd814ebc86925f3a4a109, type: 3}
+  sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  icon: {fileID: -2101009997161034824, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: I can't just reap it apart with my hands. I need to cut it!
   addToInventory: 0
   use: Yes! That's it! I have a clean, non-coagulated blood!
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 1
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

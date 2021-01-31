@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: SilverDagger
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 43358b703766fee4ebe64c7fbd583376, type: 3}
+  sound: {fileID: 0}
+  icon: {fileID: 7968973580437326733, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
   use: This dagger can come in handy
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 1
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.antonsem.extratools": "https://github.com/antonsem/ExtraToolsPackage.git",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.3",
     "com.unity.render-pipelines.universal": "11.0.0",
     "com.unity.textmeshpro": "3.0.3",

@@ -59,6 +59,7 @@ namespace GGJ21
                 t += Time.deltaTime * fadeTime;
                 yield return null;
             }
+            group.alpha = 1;
 
             float timer = Mathf.Max(minTimeOut, timeOutCoefficient * msg.Length);
 

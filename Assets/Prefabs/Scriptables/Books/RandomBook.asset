@@ -15,9 +15,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Nothing interesting
+  use: Perhaps if I had a few years, I could understand what this is about.
   used: Nothing interesting
-  description: A random book
+  description: Philosophycal Transactions of Royal Society
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
@@ -25,4 +25,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
-  sendLog: 1
+  sendLog: 0

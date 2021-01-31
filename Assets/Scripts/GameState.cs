@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace GGJ21
@@ -44,6 +45,17 @@ namespace GGJ21
         
         #region Unity Methods
 
+        private void OnEnable()
+        {
+            Events.Instance.end += OnEnd;
+        }
+
+        private void OnDisable()
+        {
+            if(IsQuitting) return;
+            Events.Instance.end -= OnEnd;
+        }
+
         private void Start()
         {
             IsPaused = false;
@@ -61,5 +73,13 @@ namespace GGJ21
         }
 
         #endregion
+
+        private static void OnEnd(Endings end)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Controller.enabled = false;
+            Clicker.enabled = false;
+        }
     }
 }

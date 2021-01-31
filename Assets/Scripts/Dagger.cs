@@ -6,8 +6,20 @@ namespace GGJ21
     {
         [SerializeField] private ItemData blood_1;
         [SerializeField] private ItemData blood_2;
-        
-        public bool IsSilver { get; set; }
+        [SerializeField] private GameObject silverDagger;
+        [SerializeField] private GameObject rustyDagger;
+
+        private bool _isSilver = false;
+        public bool IsSilver
+        {
+            get => _isSilver;
+            set
+            {
+                _isSilver = value;
+                silverDagger.gameObject.SetActive(value);
+                rustyDagger.gameObject.SetActive(!value);
+            }
+        }
         
         public override void Clicked()
         {

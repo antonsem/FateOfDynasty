@@ -25,6 +25,7 @@ namespace GGJ21
     [CreateAssetMenu(fileName = "ItemData", menuName = "GGJ21/Item Data", order = 0)]
     public class ItemData : ScriptableObject
     {
+        public AudioClip sound;
         public Sprite icon;
         public string cantUse;
         public bool addToInventory;

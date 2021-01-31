@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &5138891896822042849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267007936314680976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0153346, y: 2.0191822, z: 0.49540937}
+  m_Center: {x: -1.1230228, y: 0.9918752, z: 0.25229532}
+--- !u!114 &603439644977914222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267007936314680976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c98dff6a674337a5a16fdb38ace71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 6f940f0b282a9e04c8014f355580ef5e, type: 2}
+  audioSource: {fileID: 0}
 --- !u!1001 &6501380723480075201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,3 +96,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902713f07bf0f0e44aea4bec61521977, type: 3}
+--- !u!1 &6267007936314680976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 902713f07bf0f0e44aea4bec61521977, type: 3}
+  m_PrefabInstance: {fileID: 6501380723480075201}
+  m_PrefabAsset: {fileID: 0}

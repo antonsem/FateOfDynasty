@@ -13,7 +13,8 @@ namespace GGJ21
         [SerializeField] private Button previous;
         [SerializeField] private TMP_Text entry;
         [SerializeField] private TMP_Text label;
-
+        [SerializeField] private AudioClip pageSound;
+        
         private List<string> _entries = new List<string>();
         private int _index = 0;
 
@@ -58,6 +59,7 @@ namespace GGJ21
         {
             entry.text = msg;
             UpdateLabel();
+            AudioPlayer.PlaySound(pageSound);
         }
 
         private void OnNext()

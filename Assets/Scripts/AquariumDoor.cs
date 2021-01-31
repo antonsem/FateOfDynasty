@@ -6,6 +6,7 @@ namespace GGJ21
     {
         [SerializeField] private ItemData lockedData;
         [SerializeField] private ItemData unlockedData;
+        [SerializeField] private AudioClip unlockSound;
         
         private bool _isLocked = true;
 
@@ -26,6 +27,7 @@ namespace GGJ21
         {
             _isLocked = false;
             data = unlockedData;
+            AudioPlayer.PlaySound(unlockSound);
         }
 
         protected override void Use()
