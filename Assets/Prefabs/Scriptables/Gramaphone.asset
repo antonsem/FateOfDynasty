@@ -16,9 +16,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: 
+  use: Moonlight Sonata... My favorite...
   used: 
-  description: 
+  description: Say what you will about them, but they do know what a good music is...
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

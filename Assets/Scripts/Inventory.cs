@@ -17,5 +17,10 @@ namespace GGJ21
             Events.Instance.removeItem?.Invoke(Items[itemID]);
             Items.Remove(itemID);
         }
+
+        public static void Clear()
+        {
+            Items.Clear();
+        }
     }
 }
