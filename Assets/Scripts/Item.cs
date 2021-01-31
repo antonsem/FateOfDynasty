@@ -60,9 +60,18 @@ namespace GGJ21
 
             if(data.addItemOnUse)
                 Inventory.AddItem(data.addItemOnUse);
-            
-            if(data.sound)
-                AudioPlayer.PlaySound(data.sound);
+
+            if (data.sound)
+            {
+                if (audioSource)
+                {
+                    audioSource.Stop();
+                    audioSource.clip = data.sound;
+                    audioSource.Play();
+                }
+                else
+                    AudioPlayer.PlaySound(data.sound);
+            }
             
             if (!data.discardRequiredItems || data.requiredItems == null) return;
             

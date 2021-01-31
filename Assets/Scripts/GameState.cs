@@ -58,6 +58,7 @@ namespace GGJ21
 
         private void Start()
         {
+            Inventory.Clear();
             IsPaused = false;
         }
 
