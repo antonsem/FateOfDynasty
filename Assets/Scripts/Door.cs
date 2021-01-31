@@ -19,6 +19,8 @@ namespace GGJ21
             isOpen = !isOpen;
             _rotate = Rotate(isOpen);
             StartCoroutine(_rotate);
+            if(data.sound)
+                AudioPlayer.PlaySound(data.sound, 0.05f, 0.1f);
         }
 
         private IEnumerator Rotate(bool open)

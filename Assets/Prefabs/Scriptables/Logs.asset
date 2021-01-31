@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Logs
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 772f522a9c782904e9d220a7f8690c6c, type: 3}
+  sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  icon: {fileID: 1245066804198597470, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
-  use: I will pick one, perhaps I can find a way to lit it up...
+  use: I can't lit it up just with a candle. But I will pick one, perhaps I can find
+    a way to do it...
   used: I already have a log.
   description: Logs for the fire place. I don't think I can set them on fire only
     with a candle...
@@ -26,3 +28,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

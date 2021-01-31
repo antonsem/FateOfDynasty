@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: SilverIgnot
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 6886db5fac1305b4d82a95ca744de0c7, type: 3}
+  sound: {fileID: 0}
+  icon: {fileID: -3122698735084522214, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
   use: Now if I can find a way to cover something sharp with this piece of silver,
@@ -26,3 +27,4 @@ MonoBehaviour:
   disableAfterUse: 1
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

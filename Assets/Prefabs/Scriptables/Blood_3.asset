@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Blood_3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: aa9b325e4fcc14e489556101a958af41, type: 3}
+  sound: {fileID: 0}
+  icon: {fileID: 4359003697144533756, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 0
   use: 
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

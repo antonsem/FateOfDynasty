@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Altar
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
   icon: {fileID: 0}
   cantUse: I need to find all ingridients. THey must be here somewhere...
   addToInventory: 0
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: 1
+  sendLog: 0

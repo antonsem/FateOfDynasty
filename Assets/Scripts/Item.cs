@@ -6,7 +6,8 @@ namespace GGJ21
     public class Item : MonoBehaviour, IClickable
     {
         [SerializeField] protected ItemData data;
-
+        [SerializeField] private AudioSource audioSource;
+        
         protected bool _used = false;
         public string Description => data.description;
 
@@ -59,6 +60,9 @@ namespace GGJ21
 
             if(data.addItemOnUse)
                 Inventory.AddItem(data.addItemOnUse);
+            
+            if(data.sound)
+                AudioPlayer.PlaySound(data.sound);
             
             if (!data.discardRequiredItems || data.requiredItems == null) return;
             

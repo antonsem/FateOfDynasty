@@ -15,7 +15,8 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: It says that leeches can keep the blood non-coagulated!
+  use: A quite comprehensive book on blood. Chapter about coagulation is marked down.
+    It says that leeches do keep the blood in its non-coagulated form. Interesting...
   used: It says that leeches can keep the blood non-coagulated!
   description: A hemotology book!
   itemId: 0

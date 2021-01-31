@@ -12,5 +12,6 @@ namespace GGJ21
         public Action switchPressed;
         public Action bookPressed;
         public Action<string> addLog;
+        public Action<Endings> end;
     }
 }

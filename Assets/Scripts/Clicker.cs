@@ -17,6 +17,8 @@ namespace GGJ21
 
         private Transform _cam;
 
+        public static bool CanClick { get; private set; }
+        
         #region Unity Methods
 
         private void Awake()
@@ -30,10 +32,25 @@ namespace GGJ21
                 Click(ClickButton.Left);
             else if (Input.GetMouseButtonDown(1))
                 Click(ClickButton.Right);
+            
+            DetectObject();
         }
 
         #endregion
 
+        private void DetectObject()
+        {
+            _ray = new Ray(_cam.position, _cam.forward);
+            if (!Physics.Raycast(_ray, out _hit, rayDistance, mask))
+            {
+                CanClick = false;
+                return;
+            }
+
+            CanClick = _hit.transform.TryGetComponent(out IClickable _);
+        }
+        
+        
         private void Click(ClickButton btn)
         {
             _ray = new Ray(_cam.position, _cam.forward);
