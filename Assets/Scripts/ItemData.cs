@@ -10,11 +10,16 @@ namespace GGJ21
         FireSource,
         Matches,
         Dagger,
-        CleanDagger,
+        SilverDagger,
         Leech,
-        CoagulatedBlood,
-        Blood,
-        Door
+        Blood_3,
+        Blood_4,
+        Door,
+        Log,
+        FlammableLog,
+        Silver,
+        Blood_2,
+        Blood_1
     }
     
     [CreateAssetMenu(fileName = "ItemData", menuName = "GGJ21/Item Data", order = 0)]
@@ -32,5 +37,7 @@ namespace GGJ21
         public bool oneTimeUse;
         public bool disableAfterUse;
         public ItemData addItemOnUse;
+        public int requiredItemCount = -1;
+        public bool sendLog = false;
     }
 }

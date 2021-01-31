@@ -7,7 +7,7 @@ namespace GGJ21
     {
         [SerializeField] protected ItemData data;
 
-        private bool _used = false;
+        protected bool _used = false;
         public string Description => data.description;
 
         public virtual void Clicked()
@@ -24,7 +24,7 @@ namespace GGJ21
             if (data.requiredItems != null)
             {
                 canUse = false;
-                int count = data.requiredItems.Length;
+                int count = data.requiredItemCount < 0 ? data.requiredItems.Length : data.requiredItemCount;
                 foreach (ItemID requiredItem in data.requiredItems)
                 {
                     if (Inventory.Items.ContainsKey(requiredItem)) 
@@ -46,20 +46,27 @@ namespace GGJ21
             if (data.addToInventory)
                 Inventory.AddItem(data);
 
-            Events.Instance.displayMessage?.Invoke(data.use);
+            if (data.use.IsValid())
+            {
+                if(data.sendLog)
+                    Events.Instance.addLog?.Invoke(data.use);
+                else
+                    Events.Instance.displayMessage?.Invoke(data.use);
+            }
+            
             if(data.disableAfterUse)
                 gameObject.SetActive(false);
 
+            if(data.addItemOnUse)
+                Inventory.AddItem(data.addItemOnUse);
+            
             if (!data.discardRequiredItems || data.requiredItems == null) return;
             
             foreach (ItemID id in data.requiredItems)
                 Inventory.RemoveItem(id);
-            
-            if(data.addItemOnUse)
-                Inventory.AddItem(data.addItemOnUse);
         }
 
-        protected virtual void CantUse()
+        protected void CantUse()
         {
             Events.Instance.displayMessage?.Invoke(data.cantUse);
         }

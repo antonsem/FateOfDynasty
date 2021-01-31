@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
+  m_Name: Keg
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  cantUse: I won't drink it!
+  addToInventory: 0
+  use: Ah yes! I alchohol soaked log should burn just fine!
+  used: I don't need any more alchohol!
+  description: A keg. It's full. And it smell like a quite stromg spirit
+  itemId: 0
+  requiredItems: 0a000000
+  discardRequiredItems: 1
+  oneTimeUse: 1
+  disableAfterUse: 0
+  addItemOnUse: {fileID: 11400000, guid: 194f52e78cc29894093256281cf469df, type: 2}
+  requiredItemCount: -1
