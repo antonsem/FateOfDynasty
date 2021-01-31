@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExperimentalTable
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  cantUse: 
+  cantUse: I can use it to draw a sample of my blood, if I can find the right equipment
   addToInventory: 0
   use: An experimental table.
   used: An experimental table.
@@ -24,3 +24,4 @@ MonoBehaviour:
   oneTimeUse: 0
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
+  requiredItemCount: -1

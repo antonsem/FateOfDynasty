@@ -4,30 +4,39 @@ namespace GGJ21
 {
     public class ExperimentalTable : Item
     {
-        [SerializeField] private GameObject dagger;
-        [SerializeField] private GameObject leech;
+        [SerializeField] private Dagger dagger;
+        [SerializeField] private Leech leech;
 
         private void Awake()
         {
-            dagger.SetActive(false);
-            leech.SetActive(false);
+            dagger.gameObject.SetActive(false);
+            leech.gameObject.SetActive(false);
         }
 
-        public override void Clicked()
+        protected override void Use()
         {
             if (Inventory.Items.ContainsKey(ItemID.Dagger))
             {
                 Inventory.RemoveItem(ItemID.Dagger);
-                dagger.SetActive(true);
+                leech.IsSilver = false;
+                leech.CanUse = true;
+                dagger.IsSilver = false;
+                dagger.gameObject.SetActive(true);
             }
-            else if (Inventory.Items.ContainsKey(ItemID.CleanDagger))
+            else if (Inventory.Items.ContainsKey(ItemID.SilverDagger))
             {
-                Inventory.RemoveItem(ItemID.CleanDagger);
-                dagger.SetActive(true);
+                Inventory.RemoveItem(ItemID.SilverDagger);
+                leech.IsSilver = true;
+                leech.CanUse = true;
+                dagger.IsSilver = true;
+                dagger.gameObject.SetActive(true);
             }
-            
-            if(Inventory.Items.ContainsKey(ItemID.Leech))
-                leech.SetActive(true);
+
+            if (Inventory.Items.ContainsKey(ItemID.Leech))
+            {
+                Inventory.RemoveItem(ItemID.Leech);
+                leech.gameObject.SetActive(true);
+            }
         }
     }
 }

@@ -9,5 +9,8 @@ namespace GGJ21
         public Action<ItemData> removeItem;
         public Action<string> displayMessage;
         public Action<bool> pause;
+        public Action switchPressed;
+        public Action bookPressed;
+        public Action<string> addLog;
     }
 }
