@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: ArchitectureBooks
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: The writer of these books seems facinated with architecture, and symbology
-    of secret societies. She specifially focuses on secret switches, hidden buttons,
-    and passages. There is even a chapter on how someone could build a switch inside
-    wall, and hide it behind a brick.
+  use: The writer of these books seems fascinated with the architecture, and symbology
+    of secret societies. She specifically focuses on hidden switches, hidden buttons,
+    and passages. There is a chapter on building a switch inside a wall and hide
+    it behind a brick.
   used: 
   description: A pile of books on architecture
   itemId: 0

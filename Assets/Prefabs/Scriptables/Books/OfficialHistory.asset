@@ -17,8 +17,9 @@ MonoBehaviour:
   cantUse: 
   addToInventory: 0
   use: I certainly didn't expect to find this particular book over here. The whole
-    idea of this movement is based on the fact that "our rulers bend the truth to
-    suit their needs."
+    idea of this movement was based on the fact that "our rulers bend the truth to
+    suit their needs." Perhaps they thought it would be a good idea to catalog the
+    false history.
   used: 
   description: Modern History
   itemId: 0

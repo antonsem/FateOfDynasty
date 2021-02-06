@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: RandomBook
+  m_Name: PhilosophicalTransactions
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Perhaps if I had a few years, I could understand what this is about.
+  use: Perhaps if I had a few years, I could understand what this book is about.
   used: Nothing interesting
-  description: Philosophycal Transactions of Royal Society
+  description: Philosophical Transactions of Royal Society
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
