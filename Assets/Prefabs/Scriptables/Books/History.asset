@@ -16,9 +16,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Well, this book is humbling to say the least. I'm sure most of the official
-    history is nothing more then propoganda. I wonder if these books tell the real
-    story, or is it just propoganda from the "other side..."
+  use: Well, this book is humbling, to say the least. I'm sure most of the official
+    history is nothing more than propaganda. I wonder if these books tell the real
+    story, or is it just propaganda from the "other side..."
   used: 
   description: A book on "censored" history.
   itemId: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Wow, the writer was quite creative when it comes to distilling alchohol...
+  use: Wow, the writer was quite creative when it comes to distilling alcohol!
   used: 
   description: A book about techniques for distilling alchohol
   itemId: 0

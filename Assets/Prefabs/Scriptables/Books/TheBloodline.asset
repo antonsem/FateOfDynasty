@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: TheBloodline
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Ah yes, The Mighty Dynasty... Apperantly we are the best! "The God himself
-    gave us the right to rule!" So we can rule however we like, is that it? All the
-    wars, the poverty is fine as long as we are in power. People are supposed to
-    make sacrifices for us. "God created them to serve us!" I can't believe we were
-    indocranating ourselves with such lies, and delusions for this long...
+  use: Ah yes, The Mighty Dynasty. We are the best! "The God himself gave us the
+    right to rule!" So we can rule however we like, is that it? All the wars, the
+    poverty is acceptable as long as we are in power. People are supposed to make
+    sacrifices for us. "God created them to serve us!" I can't believe we were indoctrinating
+    ourselves with such lies, and delusions for this long.
   used: Nothing interesting
   description: The Bloodline of The Mighty Dynasty
   itemId: 0
