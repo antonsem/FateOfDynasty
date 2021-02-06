@@ -6,7 +6,7 @@ namespace GGJ21
     {
         [SerializeField] private Dagger dagger;
         [SerializeField] private Leech leech;
-
+        
         private void Awake()
         {
             dagger.gameObject.SetActive(false);

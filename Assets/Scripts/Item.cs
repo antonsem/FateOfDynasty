@@ -6,7 +6,7 @@ namespace GGJ21
     public class Item : MonoBehaviour, IClickable
     {
         [SerializeField] protected ItemData data;
-        [SerializeField] private AudioSource audioSource;
+        [SerializeField] protected AudioSource audioSource;
         
         protected bool _used = false;
         public string Description => data.description;

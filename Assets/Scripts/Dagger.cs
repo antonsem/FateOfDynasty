@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GGJ21
 {
@@ -8,7 +9,8 @@ namespace GGJ21
         [SerializeField] private ItemData blood_2;
         [SerializeField] private GameObject silverDagger;
         [SerializeField] private GameObject rustyDagger;
-
+        [SerializeField] private AudioClip enableClip;
+        
         private bool _isSilver = false;
         public bool IsSilver
         {
@@ -20,7 +22,16 @@ namespace GGJ21
                 rustyDagger.gameObject.SetActive(!value);
             }
         }
-        
+
+        private void OnEnable()
+        {
+            if (!enableClip) return;
+            if(audioSource)
+                audioSource.PlayOneShot(enableClip);
+            else
+                AudioPlayer.PlaySound(enableClip);
+        }
+
         public override void Clicked()
         {
             if (Inventory.Items.ContainsKey(ItemID.Blood_4) || Inventory.Items.ContainsKey(ItemID.Blood_3))
