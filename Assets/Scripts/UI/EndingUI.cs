@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using NUnit.Framework;
+﻿using System.Collections;
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,6 +21,8 @@ namespace GGJ21
         [SerializeField, TextArea(5, 20)] private string endingText_2;
         [SerializeField, TextArea(5, 20)] private string endingText_3;
         [SerializeField, TextArea(5, 20)] private string endingText_4;
+        [SerializeField] private Image fadeOut;
+        [SerializeField] private float fadeTime = 1;
         
         private void Awake()
         {
@@ -95,9 +94,26 @@ namespace GGJ21
             menu.gameObject.SetActive(true);
         }
 
-        private static void OnMenu()
+        private void OnMenu()
         {
-            SceneManager.LoadScene("Main");
+            AudioPlayer.Instance.SetMusic(false);
+            StartCoroutine(NewGameCoroutine());
+        }
+        
+        private IEnumerator NewGameCoroutine()
+        {
+            float t = 0;
+            while (t < 1)
+            {
+                fadeOut.color = Color.Lerp(Color.clear, Color.black, t);
+                t += Time.deltaTime / fadeTime;
+                yield return null;
+            }
+
+            fadeOut.color = Color.black;
+            yield return null;
+            
+            SceneManager.LoadScene("3DMenu");
         }
     }
 }

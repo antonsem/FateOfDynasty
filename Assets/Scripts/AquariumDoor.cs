@@ -7,7 +7,7 @@ namespace GGJ21
         [SerializeField] private ItemData lockedData;
         [SerializeField] private ItemData unlockedData;
         [SerializeField] private AudioClip unlockSound;
-        
+
         private bool _isLocked = true;
 
         private void OnEnable()
@@ -19,7 +19,7 @@ namespace GGJ21
 
         private void OnDisable()
         {
-            if(GameState.IsQuitting) return;
+            if (GameState.IsQuitting) return;
             Events.Instance.switchPressed -= Unlock;
         }
 
@@ -27,7 +27,10 @@ namespace GGJ21
         {
             _isLocked = false;
             data = unlockedData;
-            AudioPlayer.PlaySound(unlockSound);
+            if (audioSource)
+                audioSource.PlayOneShot(unlockSound);
+            else
+                AudioPlayer.PlaySound(unlockSound);
         }
 
         protected override void Use()
@@ -37,6 +40,7 @@ namespace GGJ21
                 CantUse();
                 return;
             }
+
             base.Use();
         }
     }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GGJ21
 {
@@ -7,10 +6,20 @@ namespace GGJ21
     {
         [SerializeField] private ItemData blood_3;
         [SerializeField] private ItemData blood_4;
-        
+        [SerializeField] private AudioClip enableClip;
+
         public bool IsSilver { get; set; } = false;
         public bool CanUse { get; set; } = false;
 
+        private void OnEnable()
+        {
+            if (!enableClip) return;
+            if(audioSource)
+                audioSource.PlayOneShot(enableClip);
+            else
+                AudioPlayer.PlaySound(enableClip);
+        }
+        
         protected override void Use()
         {
             if (!CanUse)

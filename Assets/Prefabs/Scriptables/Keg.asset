@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Keg
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
   icon: {fileID: 0}
   cantUse: I won't drink it!
   addToInventory: 0
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 11400000, guid: 194f52e78cc29894093256281cf469df, type: 2}
   requiredItemCount: -1
+  sendLog: 0

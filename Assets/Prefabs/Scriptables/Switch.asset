@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: Switch
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
@@ -25,3 +26,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
+  sendLog: 0

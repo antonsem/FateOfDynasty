@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
   m_Name: SilverIgnot
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
   icon: {fileID: -3122698735084522214, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1

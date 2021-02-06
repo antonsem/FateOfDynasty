@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: HemotologyBook
+  m_Name: HugeCandle
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: A comprehensive book on blood. The chapter about coagulation is marked down.
-    It says that leeches do keep the blood in its non-coagulated form. Interesting.
-  used: It says that leeches can keep the blood non-coagulated!
-  description: A hemotology book!
+  use: Someone was overcompesating!
+  used: 
+  description: This is a HUGE candle!
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
@@ -27,4 +26,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
-  sendLog: 1
+  sendLog: 0

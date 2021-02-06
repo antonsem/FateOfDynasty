@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 01ce44dcc66f09c449c54383aa2ca12b
-labels:
-- Scene
-DefaultImporter:
+guid: ca6544b9c5670a746b27fc31e0c4fc08
+NativeFormatImporter:
   externalObjects: {}
+  mainObjectFileID: 24100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
