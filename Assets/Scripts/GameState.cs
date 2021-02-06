@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace GGJ21
@@ -42,7 +41,7 @@ namespace GGJ21
                 return _clicker;
             }
         }
-        
+
         #region Unity Methods
 
         private void OnEnable()
@@ -52,7 +51,7 @@ namespace GGJ21
 
         private void OnDisable()
         {
-            if(IsQuitting) return;
+            if (IsQuitting) return;
             Events.Instance.end -= OnEnd;
         }
 
@@ -64,10 +63,14 @@ namespace GGJ21
 
         private void Update()
         {
+#if UNITY_STANDALONE || UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Escape))
+#else
+            if (Input.GetKeyDown(KeyCode.J))
+#endif
                 IsPaused = !IsPaused;
         }
-        
+
         private void OnApplicationQuit()
         {
             IsQuitting = true;
