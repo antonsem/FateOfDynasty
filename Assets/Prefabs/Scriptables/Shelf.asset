@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: ExperimentalTable
+  m_Name: Shelf
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
-  stopToggle: 0
   icon: {fileID: 0}
-  cantUse: Once I have the correct items, I can use this table to draw my blood
+  cantUse: 
   addToInventory: 0
-  use: An experimental table.
-  used: I have the blood. Now I need to perform the ritual on the altar...
-  description: An experimental table.
+  use: Nothing useful.
+  used: 
+  description: A shlf with some alchemical ingridients. Nothing interesting.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

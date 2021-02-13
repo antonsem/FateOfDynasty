@@ -17,8 +17,9 @@ MonoBehaviour:
   cantUse: 
   addToInventory: 1
   use: I can't lit it up just with a candle. But I will pick one, perhaps I can find
-    a way to do it...
-  used: I already have a log.
+    a way to do it. I should look around, I'm sure there is something in this laboratory
+    that can be used as fuel.
+  used: I already have a log. I need to find some kind of fuel to light it up.
   description: Logs for the fire place. I don't think I can set them on fire only
     with a candle...
   itemId: 10

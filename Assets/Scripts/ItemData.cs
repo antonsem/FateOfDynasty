@@ -26,6 +26,7 @@ namespace GGJ21
     public class ItemData : ScriptableObject
     {
         public AudioClip sound;
+        public bool stopToggle = false;
         public Sprite icon;
         public string cantUse;
         public bool addToInventory;

@@ -35,6 +35,7 @@ namespace GGJ21
             }
             base.Use();
             Inventory.AddItem(IsSilver ? blood_4 : blood_3);
+            Events.Instance.gotTheBlood?.Invoke();
         }
     }
 }

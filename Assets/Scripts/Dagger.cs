@@ -47,6 +47,7 @@ namespace GGJ21
         {
             data.addItemOnUse = IsSilver ? blood_2 : blood_1;
             base.Use();
+            Events.Instance.gotTheBlood?.Invoke();
         }
     }
 }

@@ -307,8 +307,8 @@ MonoBehaviour:
 
     freesfx.co.uk'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
-  m_sharedMaterial: {fileID: -2015374899557240833, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6df063028efa29b429558fa1197d4189, type: 2}
+  m_sharedMaterial: {fileID: 5899417999388469011, guid: 6df063028efa29b429558fa1197d4189, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -332,8 +332,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 31
+  m_fontSizeBase: 31
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2561,6 +2561,7 @@ MonoBehaviour:
   blood_2: {fileID: 11400000, guid: 9c69df233b876a046921946fc9a6ba86, type: 2}
   silverDagger: {fileID: 884587594}
   rustyDagger: {fileID: 1669694407}
+  enableClip: {fileID: 0}
 --- !u!1001 &379168542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3300,8 +3301,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
-  m_sharedMaterial: {fileID: -2015374899557240833, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6df063028efa29b429558fa1197d4189, type: 2}
+  m_sharedMaterial: {fileID: 5899417999388469011, guid: 6df063028efa29b429558fa1197d4189, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5086,8 +5087,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
-  m_sharedMaterial: {fileID: -2015374899557240833, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6df063028efa29b429558fa1197d4189, type: 2}
+  m_sharedMaterial: {fileID: 5899417999388469011, guid: 6df063028efa29b429558fa1197d4189, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6996,6 +6997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: c9370c1457f41fb40ba879ede75956bb, type: 2}
   audioSource: {fileID: 0}
+  slideSound: {fileID: 0}
   _endPos: {x: -8.25, y: 0.01699996, z: 0.167}
 --- !u!1001 &1215531887
 PrefabInstance:
@@ -8030,8 +8032,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
-  m_sharedMaterial: {fileID: -2015374899557240833, guid: 52e1942af5519f443b0a135a7f9f8bb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6df063028efa29b429558fa1197d4189, type: 2}
+  m_sharedMaterial: {fileID: 5899417999388469011, guid: 6df063028efa29b429558fa1197d4189, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14070,6 +14072,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   blood_3: {fileID: 11400000, guid: cad0b1b63d359cb47aa8a56a25db4cf3, type: 2}
   blood_4: {fileID: 11400000, guid: e2c20d5c017a23a4c93f1dcc634d38ab, type: 2}
+  enableClip: {fileID: 0}
 --- !u!1001 &1632685613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14922,7 +14925,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ca6544b9c5670a746b27fc31e0c4fc08, type: 2}
   m_audioClip: {fileID: 8300000, guid: 89cc1d63c5c4cfd47892833a100d267a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15018,7 +15021,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ca6544b9c5670a746b27fc31e0c4fc08, type: 2}
   m_audioClip: {fileID: 8300000, guid: ac8d3b82addd548488bcbef621377034, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0

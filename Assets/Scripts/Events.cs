@@ -13,5 +13,6 @@ namespace GGJ21
         public Action bookPressed;
         public Action<string> addLog;
         public Action<Endings> end;
+        public Action gotTheBlood;
     }
 }

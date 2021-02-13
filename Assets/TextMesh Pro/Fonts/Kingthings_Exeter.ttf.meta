@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf496d5fc86050a48ae88fa0e7a194ab
+guid: c9496fc296cc69c41bf1cb8788837442
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - DungeonFont
+  - Kingthings Exeter
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

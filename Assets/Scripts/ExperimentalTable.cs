@@ -13,8 +13,30 @@ namespace GGJ21
             leech.gameObject.SetActive(false);
         }
 
+        private void OnEnable()
+        {
+            Events.Instance.gotTheBlood += OnGotTheBlood;
+        }
+
+        private void OnDisable()
+        {
+            if(GameState.IsQuitting) return;
+            Events.Instance.gotTheBlood += OnGotTheBlood;
+        }
+        
+        private void OnGotTheBlood()
+        {
+            dagger.gameObject.SetActive(false);
+            leech.gameObject.SetActive(false);
+            Events.Instance.displayMessage?.Invoke("I've got all I need. I should be able to perform the ritual on the altar!");
+            _used = true;
+        }
+
         protected override void Use()
         {
+            if(_used)
+                Events.Instance.displayMessage?.Invoke("I've got all I need. I should be able to perform the ritual on the altar!");
+
             if (Inventory.Items.ContainsKey(ItemID.Dagger))
             {
                 Inventory.RemoveItem(ItemID.Dagger);
