@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dagger
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
   icon: {fileID: 3010777209347689072, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
