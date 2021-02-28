@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Matches
+  m_Name: SilverIngot
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: e32b8056f5f2eb741bec42f791c7f1b5, type: 3}
+  sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
+  icon: {fileID: -3122698735084522214, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
-  use: I got a pack of matches. I think I can start the fire now!
-  used: I got a pack of matches. I think I can start the fire now!
-  description: A pack of matches
-  itemId: 3
+  use: If I can find something sharp so that I can coat it with this piece of silver,
+    that would be great.
+  used: 
+  description: A silver ingot.
+  itemId: 12
   requiredItems: 
   discardRequiredItems: 0
-  oneTimeUse: 1
+  oneTimeUse: 0
   disableAfterUse: 1
   addItemOnUse: {fileID: 0}
+  requiredItemCount: -1
+  sendLog: 0

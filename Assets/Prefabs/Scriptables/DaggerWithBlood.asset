@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: DaggerWithBlood
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
   icon: {fileID: 21300000, guid: 43358b703766fee4ebe64c7fbd583376, type: 3}
-  cantUse: I already have enough blood, and I don't want to cut myself for no particular
-    reason!
+  cantUse: I have enough blood, and I don't want to cut myself for no good reason!
   addToInventory: 0
   use: Ouch! That hurt! But I do have a blood sample now!
-  used: I already have enough blood, and I don't want to cut myself for no particular
-    reason!
+  used: I have enough blood, and I don't want to cut myself for no good reason!
   description: I can use this dagger to draw some blood
   itemId: 4
   requiredItems: 

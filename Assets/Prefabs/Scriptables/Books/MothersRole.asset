@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: MothersRole
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
   use: This book goes on and on about how important it is to be a mother. It claims
     that a mother has the most crucial role in modern society. A mother. Not a woman.
     Not a person. A mother. Don't I matter just because I don't have a child? Should
-    my only purpose be to bring and raise offspring to this world?
+    my only purpose be to bring and raise an offspring to this world?
   used: 
   description: A book called "A mother's role in modern society"
   itemId: 0

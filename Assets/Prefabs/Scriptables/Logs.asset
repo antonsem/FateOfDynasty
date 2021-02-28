@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Logs
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
   icon: {fileID: 1245066804198597470, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
-  use: I can't lit it up just with a candle. But I will pick one, perhaps I can find
-    a way to do it. I should look around, I'm sure there is something in this laboratory
-    that can be used as fuel.
+  use: I can't light it up just with a candle. But I will pick one, perhaps I can
+    find a way to do it. I should look around, I'm sure there is something in this
+    laboratory that can be used as fuel.
   used: I already have a log. I need to find some kind of fuel to light it up.
-  description: Logs for the fire place. I don't think I can set them on fire only
+  description: Logs for the fireplace. I don't think I can set them on fire only
     with a candle...
   itemId: 10
   requiredItems: 

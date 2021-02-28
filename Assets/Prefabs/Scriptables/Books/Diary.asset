@@ -17,28 +17,32 @@ MonoBehaviour:
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: 'It is a diary of the last member of the resistance. The last entry reads
+  use: 'It is a diary of the last member of the resistance. The last entry reads:
 
+    
 
     "This
     is it... I''m the last member. The movement will be dead soon enough. We did
-    come very close. Reese did have the blood sample. And it even was clean, non-coagulated.
+    come very close though. Reese did have the blood sample. And it was clean, non-coagulated.
     The ritual would have been perfect...
 
+    
 
-    My only hope is that someone else
-    will discover the secret. Otherwise the Dynasty will rule forever. They cannot
-    be overthrown by a revolution, or propoganda. Lord know we tried...
+    My only hope is that someone
+    else will discover the secret. Otherwise, the Dynasty will rule forever. They
+    cannot be overthrown by a revolution, or propaganda. Lord know we tried...
 
+    
 
     J"
 
+    
 
     I
-    know I was the last person you expected to do this. But don''t worry Jeremiah,
+    know I am the last person you expected to do this. But don''t worry Jeremiah,
     I will do the right thing.'
   used: 
-  description: Looks like a diary
+  description: Looks like a diary.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

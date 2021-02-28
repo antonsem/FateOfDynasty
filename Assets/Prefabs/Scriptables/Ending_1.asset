@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Ending_1
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: UGGHHH! The pain... What did I do wrong? Have I faled to draw the blood? Was
-    it contaminated? Nevermind, it is too late now. I won't have to worry about it
-    anymore for much longer...
+  use: UGH! The pain! What have I done wrong? Have I failed to draw blood? Was it
+    contaminated? Never mind, it is too late now. I won't have to worry about it
+    for much longer...
   used: 
   description: 
   itemId: 0

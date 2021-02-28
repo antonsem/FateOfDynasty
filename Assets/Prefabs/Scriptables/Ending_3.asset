@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Ending_3
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Ending 3 (not the best one)
+  use: UGHH! It hurts! Was the blood sample contaminated? I don't think I will make
+    it through... But at least I know it will be over for them as well. Not right
+    now, but in time they WILL realize that it is over...
   used: 
   description: 
   itemId: 0

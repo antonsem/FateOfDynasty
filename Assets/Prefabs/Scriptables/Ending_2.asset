@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Ending_2
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Is that it? I don't feel any different... Did it do anything at all? I guess
-    we will see soon enough...
+  use: Is that it? I don't feel any different... I think the blood sample was somehow
+    coagulated. Does it have any effect at all? I guess we will see soon enough...
   used: 
   description: 
   itemId: 0

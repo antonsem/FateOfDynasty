@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Gramaphone
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: ac8d3b82addd548488bcbef621377034, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
   use: Moonlight Sonata... My favorite...
   used: 
-  description: Say what you will about them, but they do know what a good music is...
+  description: "Say what you will about them, but they had a good taste in music\u2026"
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: SilverDagger
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 7968973580437326733, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
   cantUse: 
   addToInventory: 1
-  use: This dagger can come in handy
+  use: This dagger can come in handy.
   used: 
-  description: A dagger used for rituals
+  description: A dagger used for rituals.
   itemId: 5
   requiredItems: 
   discardRequiredItems: 0

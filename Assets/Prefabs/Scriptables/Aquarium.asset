@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Aquarium
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: A few leeches start to suck on my blood!
-  used: I don't need any more
+  use: A few leeches have started to suck on my blood!
+  used: I don't need more of those
   description: An aquarium full of leeches
   itemId: 0
   requiredItems: 

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Shelf
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
   use: Nothing useful.
   used: 
-  description: A shlf with some alchemical ingridients. Nothing interesting.
+  description: A shelf with some alchemical ingredients. Nothing interesting.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

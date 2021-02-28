@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Leech
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 46a79afe4cbff8845ba9f1c651a2e035, type: 3}
+  stopToggle: 0
   icon: {fileID: -2101009997161034824, guid: 82ace6f68aa7e5d4c8934521b03093fc, type: 3}
-  cantUse: I can't just reap it apart with my hands. I need to cut it!
+  cantUse: I can't just rip it apart with my hands. I need to cut it!
   addToInventory: 0
-  use: Yes! That's it! I have a clean, non-coagulated blood!
-  used: I already have a blood sample
-  description: A leech with my blood
+  use: Yes! That's it! I have clean, non-coagulated blood!
+  used: I already have a blood sample.
+  description: A leech with my blood.
   itemId: 6
   requiredItems: 
   discardRequiredItems: 0

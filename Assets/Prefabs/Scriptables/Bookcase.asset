@@ -18,7 +18,7 @@ MonoBehaviour:
   cantUse: 
   addToInventory: 0
   use: I won't be sampling random potions from a creepy alchemical laboratory! Besides,
-    I already have all I need.
+    I have what need.
   used: 
   description: Looks like a potion storage.
   itemId: 0

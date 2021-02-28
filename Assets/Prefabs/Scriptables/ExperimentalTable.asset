@@ -15,7 +15,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
-  cantUse: Once I have the correct items, I can use this table to draw my blood
+  cantUse: Once I get all the required items, I can use this table to draw my blood
   addToInventory: 0
   use: An experimental table.
   used: I have the blood. Now I need to perform the ritual on the altar...

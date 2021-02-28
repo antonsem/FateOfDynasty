@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Ending_4
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Yes! I can feel it! My "family" can do whatever they like now. There is nothing
-    they can do! The Dynasty WILL end with me!
+  use: Yes! I can feel it! My "family" can do whatever they like now. The Dynasty
+    WILL end with me!
   used: 
   description: 
   itemId: 0

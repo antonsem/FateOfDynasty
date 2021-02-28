@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: RitualDagger
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
   use: '"The Dagger of Tyranny..." Oh, the stolen dagger! The new name is a bit dramatic,
-    but I don''t disagree with the symbolic message it carries. Shame the dagger
-    is covered in rust though. Still, I may be able to cut something with it.'
+    but I don''t disagree with the symbolic message it carries. Shame, the dagger
+    is covered in rust. Still, I may be able to cut something with it.'
   used: 
   description: The Dagger of Tyranny
   itemId: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Note
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
@@ -22,12 +23,18 @@ MonoBehaviour:
     Since you are here, there is not much left to do. But at least you can wait for
     your inevitable end in relative comfort. I know it can get very lonely in here,
     so I left you one last present. Check the book in the right bottom corner of
-    the library. Have fun!
+    the terrarium library. Have fun!
 
+    
 
-    -R"'
+    -R"
+
+    
+
+    Huh, I wonder
+    what he was talking about... Perhaps I should check it.'
   used: 
-  description: A note
+  description: A note.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

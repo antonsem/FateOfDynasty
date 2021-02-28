@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: OfficialHistory
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
@@ -21,7 +22,7 @@ MonoBehaviour:
     suit their needs." Perhaps they thought it would be a good idea to catalog the
     false history.
   used: 
-  description: Modern History
+  description: Modern History.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

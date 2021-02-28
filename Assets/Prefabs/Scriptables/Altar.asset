@@ -15,11 +15,12 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
   stopToggle: 0
   icon: {fileID: 0}
-  cantUse: I need a sample of my blood. Then I can perform the ritual.
+  cantUse: I need a sample of my blood. Only then, I can perform the ritual.
   addToInventory: 0
   use: 
   used: 
-  description: Once I have all ingridients, I can perform the ritual on this altar...
+  description: Once I have all the ingredients, I can perform the ritual on this
+    altar...
   itemId: 0
   requiredItems: 07000000080000000d0000000e000000
   discardRequiredItems: 1

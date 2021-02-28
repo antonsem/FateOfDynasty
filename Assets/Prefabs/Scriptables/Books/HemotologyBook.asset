@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: HemotologyBook
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
   use: A comprehensive book on blood. The chapter about coagulation is marked down.
     It says that leeches do keep the blood in its non-coagulated form. Interesting.
-  used: It says that leeches can keep the blood non-coagulated!
+  used: It says that leeches can keep the blood in its non-coagulated form!
   description: A hemotology book!
   itemId: 0
   requiredItems: 

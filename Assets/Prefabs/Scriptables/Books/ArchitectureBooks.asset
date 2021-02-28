@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: ArchitectureBooks
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
+  stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: The writer of these books seems fascinated with the architecture, and symbology
+  use: The writer of these books seems fascinated with the architecture, and symbols
     of secret societies. She specifically focuses on hidden switches, hidden buttons,
-    and passages. There is a chapter on building a switch inside a wall and hide
+    and passages. There is a chapter on building a switch inside a wall and hiding
     it behind a brick.
   used: 
   description: A pile of books on architecture
