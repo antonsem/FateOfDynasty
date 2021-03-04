@@ -14,5 +14,12 @@ namespace GGJ21
         public Action<string> addLog;
         public Action<Endings> end;
         public Action gotTheBlood;
+        public Action resetDaggerPosition;
+        public Action<bool> gotDagger;
+        public Action<bool> gotLeech;
+        public Action useDagger;
+        public Action pickUpDagger;
+        public Action useLeech;
+        public Action resetLeechPosition;
     }
 }

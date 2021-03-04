@@ -22,6 +22,37 @@ namespace GGJ21
             }
         }
 
+        // this is just a quick and horrible fix. STOP JUDGING ME!
+        private static bool _hasDagger = false;
+        public static bool HasDagger
+        {
+            get => _hasDagger;
+            set
+            {
+                _hasDagger = value;
+                Cursor.visible = value;
+                Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+                Controller.enabled = !value;
+                Clicker.enabled = !value;
+                Events.Instance.gotDagger?.Invoke(value);
+            }
+        }
+        
+        private static bool _hasLeech = false;
+        public static bool HasLeech
+        {
+            get => _hasLeech;
+            set
+            {
+                _hasLeech = value;
+                Cursor.visible = value;
+                Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+                Controller.enabled = !value;
+                Clicker.enabled = !value;
+                Events.Instance.gotLeech?.Invoke(value);
+            }
+        }
+
         private static FirstPersonController _controller;
         private static FirstPersonController Controller
         {
@@ -63,6 +94,7 @@ namespace GGJ21
 
         private void Update()
         {
+            if (HasDagger || HasLeech) return;
 #if UNITY_STANDALONE || UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.Escape))
 #else

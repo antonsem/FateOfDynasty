@@ -7,6 +7,7 @@ namespace GGJ21
         [SerializeField] private ItemData blood_3;
         [SerializeField] private ItemData blood_4;
         [SerializeField] private AudioClip enableClip;
+        [SerializeField] private Transform playerHand; // Never do this! Bad programmer!
 
         public bool IsSilver { get; set; } = false;
         public bool CanUse { get; set; } = false;
@@ -18,8 +19,30 @@ namespace GGJ21
                 audioSource.PlayOneShot(enableClip);
             else
                 AudioPlayer.PlaySound(enableClip);
+            
+            Events.Instance.resetLeechPosition += ResetPosition;
+            Events.Instance.useLeech += Use;
+        }
+
+        public override void Clicked()
+        {
+            GetToPlayer();
         }
         
+        private void GetToPlayer()
+        {
+            GameState.HasLeech = true;
+            transform.position = playerHand.position;
+            transform.rotation = Quaternion.Euler(playerHand.eulerAngles + Vector3.up * 90);
+        }
+
+        private void ResetPosition()
+        {
+            GameState.HasLeech = false;
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+        }
+
         protected override void Use()
         {
             if (!CanUse)
@@ -33,9 +56,11 @@ namespace GGJ21
                 Events.Instance.displayMessage?.Invoke(data.used);
                 return;
             }
+            
             base.Use();
             Inventory.AddItem(IsSilver ? blood_4 : blood_3);
             Events.Instance.gotTheBlood?.Invoke();
+            ResetPosition();
         }
     }
 }

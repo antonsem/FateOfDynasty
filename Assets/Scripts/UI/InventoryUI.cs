@@ -12,6 +12,9 @@ namespace GGJ21
 
         private Dictionary<ItemID, Image> itemImageDict = new Dictionary<ItemID, Image>();
 
+        private IEnumerator _removeCoroutine;
+        private ItemID _removingItem = ItemID.None;
+        
         #region Pool
         
         private List<Image> _items = new List<Image>();
@@ -33,17 +36,27 @@ namespace GGJ21
 
         #region Unity Methods
 
-        private void OnEnable()
+        private void Awake()
         {
             Events.Instance.pickedUp += AddItem;
             Events.Instance.removeItem += RemoveItem;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             if (GameState.IsQuitting) return;
             Events.Instance.pickedUp -= AddItem;
             Events.Instance.removeItem -= RemoveItem;
+        }
+
+        private void OnDisable()
+        {
+            if (GameState.IsQuitting) return;
+            if(_removingItem == ItemID.None) return;
+            itemImageDict[_removingItem].gameObject.SetActive(false);
+            itemImageDict.Remove(_removingItem);
+            _removingItem = ItemID.None;
+            _removeCoroutine = null;
         }
 
         #endregion
@@ -59,13 +72,22 @@ namespace GGJ21
 
         private void RemoveItem(ItemData data)
         {
-            StartCoroutine(RemoveItemCoroutine(data.itemId));
+            if (_removeCoroutine != null)
+            {
+                StopCoroutine(_removeCoroutine);
+                itemImageDict[_removingItem].gameObject.SetActive(false);
+                itemImageDict.Remove(_removingItem);
+                _removingItem = ItemID.None;
+            }
+
+            _removeCoroutine = RemoveItemCoroutine(data.itemId);
+            StartCoroutine(_removeCoroutine);
         }
         
         private IEnumerator RemoveItemCoroutine(ItemID itemId)
         {
             if (!itemImageDict.ContainsKey(itemId)) yield break;
-            
+            _removingItem = itemId;
             itemImageDict[itemId].color = Color.white;
             itemImageDict[itemId].CrossFadeAlpha(0, fadeTime, true);
 
@@ -74,6 +96,8 @@ namespace GGJ21
             
             itemImageDict[itemId].gameObject.SetActive(false);
             itemImageDict.Remove(itemId);
+            _removingItem = ItemID.None;
+            _removeCoroutine = null;
         }
     }
 }

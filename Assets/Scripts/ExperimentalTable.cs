@@ -60,5 +60,11 @@ namespace GGJ21
                 leech.gameObject.SetActive(true);
             }
         }
+
+        public void GetBackDagger()
+        {
+            _used = false;
+            dagger.gameObject.SetActive(false);
+        }
     }
 }
