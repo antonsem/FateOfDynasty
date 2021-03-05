@@ -19,20 +19,19 @@ MonoBehaviour:
   addToInventory: 0
   use: 'The note reads:
 
+
     "Jeremiah, I hope you will find this place eventually.
     Since you are here, there is not much left to do. But at least you can wait for
     your inevitable end in relative comfort. I know it can get very lonely in here,
     so I left you one last present. Check the book in the right bottom corner of
     the terrarium library. Have fun!
 
-    
 
     -R"
 
-    
 
-    Huh, I wonder
-    what he was talking about... Perhaps I should check it.'
+    Huh, I wonder what he was talking
+    about... Perhaps I should check it.'
   used: 
   description: A note.
   itemId: 0

@@ -24,6 +24,9 @@ namespace GGJ21
             quit.onClick.AddListener(OnQuit);
             _isLoading = true;
             AudioPlayer.Instance.SetMusic(true, () => { _isLoading = false; });
+#if UNITY_WEBGL
+            quit.gameObject.SetActive(false);
+#endif
         }
 
         private void OnNewGame()
@@ -79,7 +82,7 @@ namespace GGJ21
             yield return null;
             while (_isLoading)
                 yield return null;
-            
+
             SceneManager.LoadScene("Main");
         }
     }
