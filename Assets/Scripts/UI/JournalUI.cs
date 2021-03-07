@@ -10,9 +10,12 @@ namespace GGJ21
         [SerializeField] private Button resume;
         [SerializeField] private Button next;
         [SerializeField] private Button previous;
+        [SerializeField] private Button quit;
         [SerializeField] private TMP_Text entry;
         [SerializeField] private TMP_Text label;
         [SerializeField] private AudioClip pageSound;
+        [SerializeField] private GameObject quitPanel;
+        
         
         private List<string> _entries = new List<string>();
         private int _index = 0;
@@ -23,6 +26,7 @@ namespace GGJ21
             next.onClick.AddListener(OnNext);
             previous.onClick.AddListener(OnPrevious);
             resume.onClick.AddListener(OnResume);
+            quit.onClick.AddListener(OnQuit);
         }
 
         private void OnEnable()
@@ -91,6 +95,11 @@ namespace GGJ21
         private static void OnResume()
         {
             GameState.IsPaused = false;
+        }
+
+        private void OnQuit()
+        {
+            quitPanel.SetActive(true);
         }
     }
 }
