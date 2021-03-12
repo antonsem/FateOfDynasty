@@ -3,7 +3,7 @@
     "com.antonsem.extratools": "https://github.com/antonsem/ExtraToolsPackage.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.5",
-    "com.unity.render-pipelines.universal": "11.0.0",
+    "com.unity.render-pipelines.universal": "10.4.0",
     "com.unity.textmeshpro": "3.0.4",
     "com.unity.toolchain.win-x86_64-linux-x86_64": "0.1.19-preview",
     "com.unity.ugui": "1.0.0",

@@ -23,14 +23,14 @@ namespace GGJ21
         [SerializeField] private Color color_3;
         [SerializeField] private Color color_4;
 
-        [SerializeField] private ParticleSystem particleSystem;
+        [SerializeField] private ParticleSystem particles;
 
         private ParticleSystem.MainModule _main;
         private Endings ending = Endings.End_1;
         
         private void Awake()
         {
-            _main = particleSystem.main;
+            _main = particles.main;
         }
 
         protected override void Use()
@@ -60,7 +60,7 @@ namespace GGJ21
                 ending = Endings.End_1;
             }
 
-            particleSystem.Play(true);
+            particles.Play(true);
             Events.Instance.end?.Invoke(ending);
             base.Use();
         }

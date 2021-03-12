@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEngine;
 //https://forum.unity.com/threads/c-compression-zip-missing.577492/
 using System.IO.Compression;
-using Debug = UnityEngine.Debug;
 
 namespace GGJ21
 {
@@ -40,9 +39,6 @@ namespace GGJ21
             WindowsDeployAndPush(scenes, $"{deployPath}/{winDirectory}");
             LinuxDeployAndPush(scenes, $"{deployPath}/{linuxDirectory}");
             MacDeployAndPush(scenes, $"{deployPath}/{macDirectory}");
-            
-            // Deploy(scenes, $"{deployPath}/{linuxDirectory}", $"{linuxBuild}.x86_64", BuildTargetGroup.Standalone,
-            //     BuildTarget.StandaloneLinux64);
         }
 
         private static void WindowsDeployAndPush(in string[] scenes, in string deployPath)
@@ -101,7 +97,6 @@ namespace GGJ21
             while (true)
             {
                 process.Refresh();
-                Debug.Log("Running process...");
                 if (EditorUtility.DisplayCancelableProgressBar("Pushing to itch...",
                     $"Pushing {zipFile} to {accountName}/{gameName}:{channel}", 0))
                 {
