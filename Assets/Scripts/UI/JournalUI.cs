@@ -43,6 +43,8 @@ namespace GGJ21
         private void UpdateLabel()
         {
             label.text = $"Entry {(_entries.Count == 0 ? 0 : _index + 1).ToString()}/{_entries.Count.ToString()}";
+            next.gameObject.SetActive(_entries.Count > 1);
+            previous.gameObject.SetActive(_entries.Count > 1);
         }
         
         private void OnNewMessage(string msg)

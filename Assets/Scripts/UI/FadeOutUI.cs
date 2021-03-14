@@ -7,9 +7,26 @@ namespace GGJ21
     {
         [SerializeField] private CanvasGroup group;
         [SerializeField] private float screenTime = 5;
-        
-        private IEnumerator Start()
+
+        private void Awake()
         {
+            group.alpha = 0;
+        }
+
+        private void OnEnable()
+        {
+            Events.Instance.showInstructions += ShowInstructions;
+        }
+
+        private void OnDisable()
+        {
+            if (GameState.IsQuitting) return;
+            Events.Instance.showInstructions -= ShowInstructions;
+        }
+
+        private IEnumerator FadeOutCoroutine()
+        {
+            group.alpha = 1;
             WaitForSeconds wait = new WaitForSeconds(screenTime);
             yield return wait;
 
@@ -20,8 +37,13 @@ namespace GGJ21
                 t -= Time.deltaTime * 0.5f;
                 yield return null;
             }
-            
+
             gameObject.SetActive(false);
+        }
+
+        private void ShowInstructions()
+        {
+            StartCoroutine(FadeOutCoroutine());
         }
     }
 }
