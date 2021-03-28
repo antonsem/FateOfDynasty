@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace GGJ21
@@ -11,16 +10,16 @@ namespace GGJ21
         [SerializeField] private CanvasGroup backgroundGroup;
         [SerializeField] private CanvasGroup entry;
         [SerializeField] private TMP_Text endingText;
-        [SerializeField] private Color ending_1;
-        [SerializeField] private Color ending_2;
-        [SerializeField] private Color ending_3;
-        [SerializeField] private Color ending_4;
+        [SerializeField] private Color endingColor_1;
+        [SerializeField] private Color endingColor_2;
+        [SerializeField] private Color endingColor_3;
+        [SerializeField] private Color endingColor_4;
         [SerializeField] private Button menu;
         [SerializeField] private Image background;
-        [SerializeField, TextArea(5, 20)] private string endingText_1;
-        [SerializeField, TextArea(5, 20)] private string endingText_2;
-        [SerializeField, TextArea(5, 20)] private string endingText_3;
-        [SerializeField, TextArea(5, 20)] private string endingText_4;
+        [SerializeField] private ItemData ending_1;
+        [SerializeField] private ItemData ending_2;
+        [SerializeField] private ItemData ending_3;
+        [SerializeField] private ItemData ending_4;
         [SerializeField] private Image fadeOut;
         [SerializeField] private float fadeTime = 1;
         
@@ -62,20 +61,24 @@ namespace GGJ21
             switch (end)
             {
                 case Endings.End_1:
-                    background.CrossFadeColor(ending_1, 3, true, false);
-                    endingText.text = endingText_1;
+                    background.CrossFadeColor(endingColor_1, 3, true, false);
+                    GameData.Instance.Unlock(ending_1.name);
+                    endingText.text = ending_1.use;
                     break;
                 case Endings.End_2:
-                    background.CrossFadeColor(ending_2, 3, true, false);
-                    endingText.text = endingText_2;
+                    background.CrossFadeColor(endingColor_2, 3, true, false);
+                    GameData.Instance.Unlock(ending_2.name);
+                    endingText.text = ending_2.use;
                     break;
                 case Endings.End_3:
-                    background.CrossFadeColor(ending_3, 3, true, false);
-                    endingText.text = endingText_3;
+                    background.CrossFadeColor(endingColor_3, 3, true, false);
+                    GameData.Instance.Unlock(ending_3.name);
+                    endingText.text = ending_3.use;
                     break;
                 case Endings.End_4:
-                    background.CrossFadeColor(ending_4, 3, true, false);
-                    endingText.text = endingText_4;
+                    background.CrossFadeColor(endingColor_4, 3, true, false);
+                    GameData.Instance.Unlock(ending_4.name);
+                    endingText.text = ending_4.use;
                     break;
             }
 
@@ -113,7 +116,7 @@ namespace GGJ21
             fadeOut.color = Color.black;
             yield return null;
             
-            SceneManager.LoadScene("3DMenu");
+            GameState.QuitToMenu();
         }
     }
 }

@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: TheBloodline
+  m_Name: A book on architecture
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Ah yes, The Mighty Dynasty. We are the best! "God himself gave us the right
-    to rule!" So, we can rule however we like, is that it? All the wars and poverty
-    are acceptable so long as we are in power. People are supposed to make sacrifices
-    for us. "God created them to serve us!" I can't believe we were indoctrinating
-    ourselves with such lies, and delusions for this long.
-  used: Nothing interesting
-  description: The Bloodline of The Mighty Dynasty
+  use: The writer of these books seems fascinated with the architecture, and symbols
+    of secret societies. She specifically focuses on hidden switches, hidden buttons,
+    and passages. There is a chapter on building a switch inside a wall and hiding
+    it behind a brick.
+  used: 
+  description: A pile of books on architecture
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

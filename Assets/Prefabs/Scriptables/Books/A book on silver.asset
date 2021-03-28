@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: MothersRole
+  m_Name: A book on silver
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: This book goes on and on about how important it is to be a mother. It claims
-    that a mother has the most crucial role in modern society. A mother. Not a woman.
-    Not a person. A mother. Don't I matter just because I don't have a child? Should
-    my only purpose be to bring and raise an offspring to this world?
+  use: I never imagined that it was possible to write a whole book on silver. Did
+    you know that it is possible to melt a silver ingot on a fire? Yes, actually
+    I did.
   used: 
-  description: A book called "A mother's role in modern society"
+  description: Silver
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

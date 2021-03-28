@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace GGJ21
@@ -110,6 +111,12 @@ namespace GGJ21
 
         #endregion
 
+        public static void QuitToMenu()
+        {
+            IsQuitting = true;
+            SceneManager.LoadScene("3DMenu");
+        }
+        
         private static void OnEnd(Endings end)
         {
             Cursor.visible = true;

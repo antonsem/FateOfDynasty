@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Ending_1
+  m_Name: The ritual book
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: UGH! The pain! What have I done wrong? Have I failed to draw blood? Was it
-    contaminated? Never mind, it is too late now. I won't have to worry about it
-    for much longer...
+  use: According to this book I have everything I need. Only my blood remains. Someone
+    underlined the word "blood" and wrote "non-coagulated" next to it. Another note
+    says "USE SILVER!"
   used: 
-  description: 
+  description: An old book describung the ritual.
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
@@ -29,4 +29,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
-  sendLog: 0
+  sendLog: 1

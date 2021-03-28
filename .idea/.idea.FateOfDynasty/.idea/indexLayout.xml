@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelUserStore">
+    <attachedFolders />
+    <explicitIncludes>
+      <Path>Library/PackageCache/com.antonsem.extratools@f9a3335737</Path>
+      <Path>Library/PackageCache/com.unity.cinemachine@2.6.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@3.0.5</Path>
+      <Path>Library/PackageCache/com.unity.mathematics@1.1.0</Path>
+      <Path>Library/PackageCache/com.unity.recorder@2.5.5</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@10.4.0</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.universal@10.4.0</Path>
+      <Path>Library/PackageCache/com.unity.searcher@4.3.1</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@10.4.0</Path>
+      <Path>Library/PackageCache/com.unity.sysroot.linux-x86_64@0.1.14-preview</Path>
+      <Path>Library/PackageCache/com.unity.sysroot@0.1.19-preview</Path>
+      <Path>Library/PackageCache/com.unity.textmeshpro@3.0.4</Path>
+      <Path>Library/PackageCache/com.unity.timeline@1.4.7</Path>
+      <Path>Library/PackageCache/com.unity.toolchain.win-x86_64-linux-x86_64@0.1.19-preview</Path>
+      <Path>Library/PackageCache/jillejr.newtonsoft.json-for-unity@f2c6cb0981</Path>
+      <Path>Packages</Path>
+      <Path>ProjectSettings</Path>
+    </explicitIncludes>
+    <explicitExcludes>
+      <Path>.git</Path>
+      <Path>.idea</Path>
+      <Path>Library</Path>
+      <Path>Logs</Path>
+      <Path>Temp</Path>
+      <Path>UserSettings</Path>
+      <Path>obj</Path>
+    </explicitExcludes>
+  </component>
+</project>

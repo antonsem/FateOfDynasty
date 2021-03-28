@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: Ending_2
+  m_Name: A mother's role
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 34d2585c9297cdf4cbab37bd77ac96be, type: 3}
+  sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: Is that it? I don't feel any different... I think the blood sample was somehow
-    coagulated. Does it have any effect at all? I guess we will see soon enough...
+  use: This book goes on and on about how important it is to be a mother. It claims
+    that a mother has the most crucial role in modern society. A mother. Not a woman.
+    Not a person. A mother. Don't I matter just because I don't have a child? Should
+    my only purpose be to bring and raise an offspring to this world?
   used: 
-  description: 
+  description: A book called "A mother's role in modern society"
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0
@@ -28,4 +30,4 @@ MonoBehaviour:
   disableAfterUse: 0
   addItemOnUse: {fileID: 0}
   requiredItemCount: -1
-  sendLog: 0
+  sendLog: 1

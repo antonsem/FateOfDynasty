@@ -11,6 +11,7 @@ namespace GGJ21
         {
             yield return null;
             Events.Instance.addLog?.Invoke(data.use);
+            GameData.Instance.Unlock(data.name);
             yield return null;
             Events.Instance.pause += StartGame;
         }

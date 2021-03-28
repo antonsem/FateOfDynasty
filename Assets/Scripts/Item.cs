@@ -49,8 +49,11 @@ namespace GGJ21
 
             if (data.use.IsValid())
             {
-                if(data.sendLog)
+                if (data.sendLog)
+                {
                     Events.Instance.addLog?.Invoke(data.use);
+                    GameData.Instance.Unlock(data.name);
+                }
                 else
                     Events.Instance.displayMessage?.Invoke(data.use);
             }

@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f92fb81b28c4f6c89276624198dd90a, type: 3}
-  m_Name: HemotologyBook
+  m_Name: The Bloodline
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   stopToggle: 0
   icon: {fileID: 0}
   cantUse: 
   addToInventory: 0
-  use: A comprehensive book on blood. The chapter about coagulation is marked down.
-    It says that leeches do keep the blood in its non-coagulated form. Interesting.
-  used: It says that leeches can keep the blood in its non-coagulated form!
-  description: A hemotology book!
+  use: Ah yes, The Mighty Dynasty. We are the best! "God himself gave us the right
+    to rule!" So, we can rule however we like, is that it? All the wars and poverty
+    are acceptable so long as we are in power. People are supposed to make sacrifices
+    for us. "God created them to serve us!" I can't believe we were indoctrinating
+    ourselves with such lies, and delusions for this long.
+  used: Nothing interesting
+  description: The Bloodline of The Mighty Dynasty
   itemId: 0
   requiredItems: 
   discardRequiredItems: 0

@@ -17,7 +17,7 @@ namespace GGJ21
 
         private static void OnYes()
         {
-            SceneManager.LoadScene("3DMenu");
+            GameState.QuitToMenu();
         }
 
         private void OnNo()
