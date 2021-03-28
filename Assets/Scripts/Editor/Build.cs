@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 //https://forum.unity.com/threads/c-compression-zip-missing.577492/
 using System.IO.Compression;
+using Debug = UnityEngine.Debug;
 
 namespace GGJ21
 {
@@ -45,32 +46,34 @@ namespace GGJ21
         {
             Deploy(scenes, deployPath, $"{winBuild}.exe", BuildTargetGroup.Standalone,
                 BuildTarget.StandaloneWindows64);
-            
+
             Zip(deployPath);
-            
+            Debug.Log("Zipped Windows build");
+
             PushToItch($"{deployPath}.zip", itchAccountName, itchGameName, winChannel);
+            Debug.Log("Pushed Windows build to itch");
         }
-        
+
         private static void LinuxDeployAndPush(in string[] scenes, in string deployPath)
         {
             Deploy(scenes, deployPath, $"{linuxBuild}.x86_64", BuildTargetGroup.Standalone,
                 BuildTarget.StandaloneLinux64);
-            
+
             Zip(deployPath);
-            
+
             PushToItch($"{deployPath}.zip", itchAccountName, itchGameName, linuxChannel);
         }
-        
+
         private static void MacDeployAndPush(in string[] scenes, in string deployPath)
         {
             Deploy(scenes, deployPath, $"{macBuild}.app", BuildTargetGroup.Standalone,
                 BuildTarget.StandaloneOSX);
-            
+
             Zip(deployPath);
-            
+
             PushToItch($"{deployPath}.zip", itchAccountName, itchGameName, macChannel);
         }
-        
+
         private static void Deploy(in string[] scenes, in string directory, in string buildName,
             BuildTargetGroup buildTargetGroup, BuildTarget buildTarget)
         {
@@ -80,20 +83,22 @@ namespace GGJ21
 
             EditorUserBuildSettings.SwitchActiveBuildTarget(buildTargetGroup, buildTarget);
             BuildPipeline.BuildPlayer(scenes, $"{directory}/{buildName}", buildTarget, BuildOptions.None);
+            Debug.Log($"Deployed to {buildTarget}");
         }
 
         private static void Zip(in string path)
         {
-            if(File.Exists($"{path}.zip"))
+            if (File.Exists($"{path}.zip"))
                 File.Delete($"{path}.zip");
-            
+
             ZipFile.CreateFromDirectory(path, $"{path}.zip");
+            Debug.Log($"Created zip file {path}.zip");
         }
 
         private static void PushToItch(in string zipFile, in string accountName, in string gameName, in string channel)
         {
             string strCmdText = $"/C butler push {zipFile} {accountName}/{gameName}:{channel}";
-            Process process = Process.Start("CMD.exe",strCmdText);
+            Process process = Process.Start("CMD.exe", strCmdText);
             while (true)
             {
                 process.Refresh();
@@ -103,9 +108,18 @@ namespace GGJ21
                     process.Kill();
                     break;
                 }
+
                 if (process.HasExited) break;
             }
+
             EditorUtility.ClearProgressBar();
+            if (process.ExitCode != 0)
+            {
+                Debug.LogError($"Couldn't push to butler! Exit code: {process.ExitCode.ToString()}");
+                return;
+            }
+            
+            Debug.Log($"Pushing {zipFile} to {accountName}/{gameName}:{channel}'");
         }
     }
 }
